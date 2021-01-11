@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gpu-scalar-pod
+  labels:
+   app: gpu-scalar-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+     app: gpu-scalar-load
+  template:
+    metadata:
+     labels:
+        app: gpu-scalar-load
+    spec:
+     containers:
+     - name: gpu-scalar-load
+       image: wnghks3030/scalar:v1.1
+       args: ["-p","5700"]
+       ports:
+       - containerPort: 5700
+     affinity:
+      nodeAffinity:
+       preferredDuringSchedulingIgnoredDuringExecution:
+       - weight: 80 
+         preference:
+          matchExpressions:
+          - key: worker
+            operator: In
+            values:
+            - xavier
+       - weight: 40
+         preference:
+          matchExpressions:
+          - key: worker
+            operator: In
+            values:
+            - tx2

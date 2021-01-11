@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: scalar-svc
+  labels:
+    apps: scalar-svc
+  namespace: test-app
+spec:
+  sessionAffinity: ClientIP
+  clusterIP: 10.110.194.3
+  externalIPs:
+   - 168.246.41.45
+  externalTrafficPolicy: Cluster
+  ports:
+   - nodePort: 31101
+     port: 81
+     protocol: TCP
+     targetPort: 5700
+  selector:
+    app: scalar-deploy
+  type: LoadBalancer
+status:
+  loadBalancer: {}
+

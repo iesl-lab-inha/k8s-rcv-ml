@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        {% if title %}
+        <title>result page </title>
+        {% endif %}
+    </head>
+
+    <body>
+        <h1> Test Result </h1>
+        <table border=1>
+            {% for key, value in result_allocatable.items() %}
+            <tr>
+                <th> {{key}} </th>
+                <td>
+                    <table border = 2>
+                    {% for key2, value2 in value.items() %}
+                    <tr>
+                        <th> {{key2}} </th>
+                        <td> {{value2}} </td>
+                    </tr>
+                    {% endfor %}
+                    </table>
+                </td>
+                <td>
+                    <table border = 2>
+                    {% for key2, value2 in result_capacity[key].items() %}
+                    <tr>
+                        <th> {{key2}} </th>
+                        <td> {{value2}} </td>
+                    </tr>
+                    {% endfor %}
+                    </table>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
