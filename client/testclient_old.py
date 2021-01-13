@@ -10,7 +10,7 @@ import time
 import os
 import sys
 
-server = 'http://165.246.41.45:31000/app-service'
+server = 'http://xxx.xxx.xxx:xxxxx/app-service'
 
 WS = "ws://165.246.41.45:"
 
