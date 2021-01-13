@@ -9,7 +9,7 @@ from datetime import datetime
 import time
 
 
-server = 'http://165.246.41.45:5600/app-service'
+server = 'http://xxx.xxx.xxx.xxx:xxxxx/app-service'
 
 WS = "ws://localhost:"
 
