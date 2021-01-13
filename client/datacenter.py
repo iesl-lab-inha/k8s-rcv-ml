@@ -82,8 +82,8 @@ def center_api_call(center):
     print(response.json())
 
 if __name__ == '__main__':
-    SCALAR_URL = "http://ec2-3-23-18-37.us-east-2.compute.amazonaws.com/driver-class-predict/80"
-    IMAGE_URL = "http://ec2-3-23-18-37.us-east-2.compute.amazonaws.com/driver-image-recognition/41"
+    SCALAR_URL = "http://xxx/driver-class-predict/80"
+    IMAGE_URL = "http://xxx/driver-image-recognition/41"
     WS = "ws://ec2-3-23-18-37.us-east-2.compute.amazonaws.com:"
     if sys.argv[1] == 'scalar':
         thread_api = threading.Thread(target = center_api_call, args=(SCALAR_URL,))
