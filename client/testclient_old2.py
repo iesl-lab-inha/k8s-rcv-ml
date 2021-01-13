@@ -11,7 +11,7 @@ import time
 import os
 import sys
 
-server = 'http://165.246.41.45:31000/app-service'
+server = 'http://xxx.xxx.xxx.xxx:xxxxxx/app-service'
 center = 'http://ec2-3-23-18-37.us-east-2.compute.amazonaws.com/'
 WS = "ws://165.246.41.45:"
 
