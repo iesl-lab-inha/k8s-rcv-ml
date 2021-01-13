@@ -7,6 +7,7 @@ k8s-rcv-ml
 ## 1.1 structure
 ### 1.1.1 Hardware
 엣지 서버는 Master Node, Worker Node로 구성된 클러스터 서버로 kubernetes 플랫폼을 기반으로 한다.   
+#### MasterNode   
 **Master node**는 클러스터 전체를 컨트롤하는 역할을 한다. (상태 정보 관리, Worker node에 pod를 할당하고 pod 안에 컨테이너를 띄움 등)   
    
 <img src="/readme_thumbnail/master.png" width="240px" height="180px" alt="master"></img><br/>   
@@ -17,8 +18,8 @@ Master node의 구조는 위의 그림과 같다. Master node는 Docker, Control
 + **etcd**: 분산 시스템을 계속 실행하는 데 필요한 중요한 정보를 보관하고 관리하는 데 사용되는 오픈소스 분산 key-value 저장소이다. 모든 클러스터 데이터(Kubernetes의 구성 데이터, 상태 데이터 및 메타 데이터)를 관리한다.       
 + **kube-scheduler**: 스케줄링은 kubelet이 pod를 실행할 수 있도록 pod가 노드에 적합한지 확인하고, pod, 서비스 등의 리소스를 적절한 노드에 할당하는 것이다. (노드가 배정되지 않은 새로 생성된 pod를 감지하고 해당 pod가 실행될 최상의 노드를 선택) 
 + **kube-controller-manager**: 컨트롤러를 생성하고 이를 각 노드에 배포하며 관리하는 역할을 한다.    
-   
-+ **Worker node**는 Master node에 의해 명령을 받고 pod를 호스트한다.     
+#### WorkerNode   
+**Worker node**는 Master node에 의해 명령을 받고 pod를 호스트한다.     
    
 <img src="/readme_thumbnail/worker.png" width="240px" height="180px" alt="worker"></img><br/>    
    
