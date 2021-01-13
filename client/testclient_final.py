@@ -11,7 +11,7 @@ import time
 import os
 import sys
 
-EDGE = 'http://165.246.41.45:31000/app-service'
+EDGE = 'http://xxx.xxx.xxx:xxxx/app-service'
 CENTER = 'http://ec2-3-23-18-37.us-east-2.compute.amazonaws.com'
 
 EDGE_WS = "ws://165.246.41.45"
