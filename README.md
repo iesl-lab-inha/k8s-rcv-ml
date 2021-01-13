@@ -1,12 +1,13 @@
 k8s-rcv-ml
 =================
 # 1. Goal
-클러스터로 구성된 Edge Computing 환경 구성을 위한 서비스 요청과 
-외부 Client의 요청을 proxy server의 역할을 하는 Router(고정IP)에서 받은 후 포트가 정해져 있는 Receive server의 Service로 전달한다. (Receive server는 pod로 구성되며 node들 중 임의로 한 node가 선택되어 구성된다. Receive server의 포트 번호는 외부 Client와의 연결을 위해 로드밸런서로 설정하여 외부에 노출된다.)
-# 1. Example Environment
-## 1.1 structure
+클러스터로 구성된 Edge Computing 환경 구성을 위한 서비스 요청을 해결하고, container 환경의 DL 서비스를 지원하기 위해서 구성된 플랫폼을 목표로 한다.
 
+# 2. Function
+## 1.1 structure
 ### 1.1.1 Hardware
+엣지 서버는 Master Node, Worker Node로 구성된 클러스터 서버로 kubernetes 플랫폼을 기반으로 한다.
+**Master node**는 클러스터 전체를 컨트롤하는 역할을 한다. (상태 정보 관리, Worker node에 pod를 할당하고 pod 안에 컨테이너를 띄움 등)
 
 ### 1.1.2 Software
 
