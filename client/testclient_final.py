@@ -14,7 +14,7 @@ import sys
 EDGE = 'http://xxx.xxx.xxx:xxxx/app-service'
 CENTER = 'http://ec2-3-23-18-37.us-east-2.compute.amazonaws.com'
 
-EDGE_WS = "ws://165.246.41.45"
+EDGE_WS = "ws://xxxx"
 
 columns=["Long_Term_Fuel_Trim_Bank1","Intake_air_pressure","Accelerator_Pedal_value","Fuel_consumption","Torque_of_friction","Maximum_indicated_engine_torque","Engine_torque","Calculated_LOAD_value", "Activation_of_Air_compressor","Engine_coolant_temperature","Transmission_oil_temperature","Wheel_velocity_front_left-hand","Wheel_velocity_front_right-hand","Wheel_velocity_rear_left-hand", "Torque_converter_speed","Class"]
 
