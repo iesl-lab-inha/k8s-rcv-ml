@@ -61,8 +61,8 @@ def center_api_call(center):
     print(response.json())
 
 if __name__ == '__main__':
-    URL = "http://ec2-3-23-18-37.us-east-2.compute.amazonaws.com/driver-class-predict/80"
-    WS = "ws://ec2-3-23-18-37.us-east-2.compute.amazonaws.com:"
+    URL = "http://xxx/driver-class-predict/80"
+    WS = "ws://xxxx:"
     
     thread_api = threading.Thread(target = center_api_call, args=(URL,))
     thread_api.start()
