@@ -9,7 +9,7 @@ k8s-rcv-ml
 엣지 서버는 Master Node, Worker Node로 구성된 클러스터 서버로 kubernetes 플랫폼을 기반으로 한다.
 **Master node**는 클러스터 전체를 컨트롤하는 역할을 한다. (상태 정보 관리, Worker node에 pod를 할당하고 pod 안에 컨테이너를 띄움 등)
 
-<img src="/readme_thumbnail/master.png" width="360px" height="240px" alt="master"></img><br/>
+<img src="/readme_thumbnail/master.png" width="240px" height="180px" alt="master"></img><br/>
 
 Master node의 구조는 위의 그림과 같다. Master node는 Docker, Controller manager, kube-Scheduler, etcd, API server로 구성된다.
 **Docker**: Docker는 어플리케이션을 패키징, 배포, 실행하기 위한 플랫폼이다. Docker는 애플리케이션을 전체 환경과 함께 패키지화 되기 때문에 가상머신을 사용하여 가상머신 이미지를 만드는 것보다 훨씬 작은 컨테이너 이미지를 사용하므로 훨씬 가볍다. 또한 Docker 기반 컨테이너 이미지는 재사용이 쉬운 레이어로 구성되어 있어 배포 속도가 빠르고 이미지 스토리지 공간을 줄이는 데 효율적이다. Master node에서 Docker는 이런 이점들을 가지고 컨테이너 안에 리눅스 응용 프로그램들을 자동적으로 배치시켜준다. 
@@ -20,7 +20,7 @@ Master node의 구조는 위의 그림과 같다. Master node는 Docker, Control
 
 **Worker node**는 Master node에 의해 명령을 받고 pod를 호스트한다. 
 
-<img src="/readme_thumbnail/worker.png" width="360px" height="240px" alt="worker"></img><br/>
+<img src="/readme_thumbnail/worker.png" width="240px" height="180px" alt="worker"></img><br/>
 
 Worker node의 구조는 위의 그림과 같다. Linux OS, Nvidia-runtime, pod로 구성된다.
 **Nvidia-runtime**: Nvidia-runtime은 컨테이너 런타임의 하나로 컨테이너 실행을 담당하는 소프트웨어이다. 컨테이너 런타임은 pod를 통해서 배포된 컨테이너를 실행한다. Nvidia 컨테이너 런타임은 OCI(Open Containers Initiative) 사양과 호환되는 GPU 인식 컨테이너 런타임이므로, 컨테이너화 된 GPU 가속 애플리케이션을 구축하고 배포 프로세스를 단순화한다. (Docker에서도 OCI를 사용하므로 호환됨)
