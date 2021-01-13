@@ -12,7 +12,7 @@ import sys
 
 server = 'http://xxx.xxx.xxx:xxxxx/app-service'
 
-WS = "ws://165.246.41.45:"
+WS = "ws://xxxx:"
 
 columns=["Long_Term_Fuel_Trim_Bank1","Intake_air_pressure","Accelerator_Pedal_value","Fuel_consumption","Torque_of_friction","Maximum_indicated_engine_torque","Engine_torque","Calculated_LOAD_value", "Activation_of_Air_compressor","Engine_coolant_temperature","Transmission_oil_temperature","Wheel_velocity_front_left-hand","Wheel_velocity_front_right-hand","Wheel_velocity_rear_left-hand", "Torque_converter_speed","Class"]
 
