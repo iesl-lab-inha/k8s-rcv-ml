@@ -70,22 +70,22 @@ create_deployment_object를 통해 생성된 Deployment를 기존 Namespace에 �
 Server와 통신을 위한 Websocket을 연결한 후 Scalar data 초기 40개를 Model Ready Test를 위해 전송 및 결과값 수신   
 이후 Model Ready 상태이면 초기 40개 이후의 data들을 40개씩 나누어 보내 Server에서 ML 작업을 수행한 결과를 받아 처리함   
 2번째 송신부터는 각 40개씩 처리하는 과정에서의 End-to-End 소요시간, 데이터 처리 소요시간, 대역폭을 계산하여 출력   
-   +**image_connect (ws, port)** : ML Type이 Image인 데이터를 Server ML 작업을 위한 과정을 수행함   
+   + **image_connect (ws, port)** : ML Type이 Image인 데이터를 Server ML 작업을 위한 과정을 수행함   
 Scalar 데이터 처리 이후에 연속적으로 시행되기 때문에 사전 Model Test 과정 생략   
 그 외에는 scalar_connect와 동일하게 Image data를 Websocket을 통해 Server로 보내고 작업된 결과를 수신   
 또한 해당 과정에서의 End-to-End 소요시간, 데이터 처리 소요시간, 대역폭을 계산하여 출력   
-   +**main**: 전체적인 Client 과정을 수행   
+   + **main**: 전체적인 Client 과정을 수행   
 request_to_edge를 통해 Edge Server의 가용성을 확인한 후 ML 처리를 Edge, Center 둘 중 어디서 처리할 지 결정   
 처리 장소를 결정한 후에는 Scalar, Image 순으로 데이터를 처리   
    
 (3) **Scalar(Deployment_Driver_Profiling_rework.py)**   
 Driver Profile에 관한 정보를 입력으로 Machine Learning을 통해 저장된 Data 중에서 가장 유사한 Profile을 찾아 반환   
-   +**Preprocessing (classes, column2, Wx, dx, df)- deprecated** : 입력으로 들어온 df 데이터 중 필요없는 부분을 일부 제거하고 ML 입력 형식에 맞도록 가공, 현재 사용되지 않음   
-   +**Labels_Transform (labels) - deprecated** : scikit-learn 라이브러리를 통해 입력으로 들어온 labels 데이터를 정규화함, 현재 사용되지 않음   
-   +**Testing_model (X_test, model)**: 입력으로 들어온 40개의 X_test 데이터를 사전에 Train된 model을 기준으로 예측 값을 찾고 반환함.
+   + **Preprocessing (classes, column2, Wx, dx, df)- deprecated** : 입력으로 들어온 df 데이터 중 필요없는 부분을 일부 제거하고 ML 입력 형식에 맞도록 가공, 현재 사용되지 않음   
+   + **Labels_Transform (labels) - deprecated** : scikit-learn 라이브러리를 통해 입력으로 들어온 labels 데이터를 정규화함, 현재 사용되지 않음   
+   + **Testing_model (X_test, model)**: 입력으로 들어온 40개의 X_test 데이터를 사전에 Train된 model을 기준으로 예측 값을 찾고 반환함.
 그 외에 예측값들을 통해 산출된 신뢰도와 이 과정을 수행하는 데 걸린 소요 시간을 측정하고 같이 반환함.   
-   +**running_ml (websocket, path)**: 실제 Client와 Websocket을 통해 40개씩 데이터를 받고 ML을 통한 결과값을 다시 Client에게 반환함. 초기 40개의 데이터는 ML을 위한 model 데이터 준비에 확인하는 용도이며, 이후 40개부터 실제 예측이 진행됨.   
-   +**main**: Client와의 통신을 위한 Websocket을 초기화하고 시작하는 과정을 수행   
+   + **running_ml (websocket, path)**: 실제 Client와 Websocket을 통해 40개씩 데이터를 받고 ML을 통한 결과값을 다시 Client에게 반환함. 초기 40개의 데이터는 ML을 위한 model 데이터 준비에 확인하는 용도이며, 이후 40개부터 실제 예측이 진행됨.   
+   + **main**: Client와의 통신을 위한 Websocket을 초기화하고 시작하는 과정을 수행   
 
 (4) **Image(ImageRecognition_original.py)**   
 
