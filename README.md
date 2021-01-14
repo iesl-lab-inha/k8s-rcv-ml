@@ -8,7 +8,7 @@ k8s-rcv-ml
 엣지 서버는 Master Node, Worker Node로 구성된 클러스터 서버로 kubernetes 플랫폼을 기반으로 한다. 프로그램은 다음과 같은 구조에서 실행되도록 구성되었다.   
 
 <p align="center"><img src="/readme_thumbnail/Hardware env.png" width="30%" height="30%" alt="master"></img></p><br/>   
-#### 2.1.1 MasterNode   
+#### 2.1.1 MasterNode      
 **Master node**는 클러스터 전체를 컨트롤하는 역할을 한다. (상태 정보 관리, Worker node에 pod를 할당하고 pod 안에 컨테이너를 띄움 등)   
    
 <p align="center"><img src="/readme_thumbnail/master.png" width="30%" height="25%" alt="master"></img></p><br/>   
@@ -56,8 +56,8 @@ Client에서 받은 요청을 기반으로 가용성 확인 및 Edge 서버 Depl
 ++ **service_request** : Kubernetes 기본 설정을 처리한 후 Xavier, tx2 H/W의 ML 가용 용량을 설정   
 create_deployment_object를 통해 생성된 Deployment를 기존 Namespace에 생성된 Deployment 유무를 통해 처리를 결정   
 
-**기존 Deployment가 없는 경우**: Namespace 생성 및 생성된 Deployment를 추가
-**기존 Deployment가 있는 경우**: 사전에 설정된 ML 가용 용량을 확인 후 허용 범위 내이면 생성된 Deployment를 추가. 만약에 ML 가용 용량을 벗어난다면 생성된 Deployment를 기존 Namespace에 추가하지 않고 offloading값을 1로 설정하여 결과 반환. 이 경우 Client에서는 Edge 서버 대신 Center 서버 사용.   
+**기존 Deployment가 없는 경우**: Namespace 생성 및 생성된 Deployment를 추가   
+**기존 Deployment가 있는 경우**: 사전에 설정된 ML 가용 용량을 확인 후 허용 범위 내이면 생성된 Deployment를 추가. 만약에 ML 가용 용량을 벗어난다면 생성된 Deployment를 기존 Namespace에 추가하지 않고 offloading값을 1로 설정하여 결과 반환. 이 경우 Client에서는 Edge 서버 대신 Center 서버 사용.    
 
 ++ **main** : Flask 서버를 초기화하고 동작시킴.   
 #### 2.2.4
