@@ -61,7 +61,24 @@ create_deployment_object를 통해 생성된 Deployment를 기존 Namespace에 �
 **기존 Deployment가 있는 경우**: 사전에 설정된 ML 가용 용량을 확인 후 허용 범위 내이면 생성된 Deployment를 추가. 만약에 ML 가용 용량을 벗어난다면 생성된 Deployment를 기존 Namespace에 추가하지 않고 offloading값을 1로 설정하여 결과 반환. 이 경우 Client에서는 Edge 서버 대신 Center 서버 사용.    
 
    + **main** : Flask 서버를 초기화하고 동작시킴.   
-#### 2.2.4
+(2) **Client(testclient_final.py)**   
+서버 상태를 확인하고 서버에서 처리할 데이터를 사전 처리한 후 전송하여 결과값을 수신   
+   + **timer (start, end)** : 입력으로 들어온 start, end 간 시간 간격을 계산하여 반환함   
+   + **request_to_edge (ml_type, client_id)** : Edge Server에 가용이 가능한지 Request를 보내고 Response를 받아 JSON 형식으로 반환함   
+   + **request_to_center (ml_type, client_id)** : 외부 Center Server에 가용이 가능한지 Request를 보내고 Response를 받아 JSON 형식으로 반환함
+   + **•	scalar_connect (ws, port)** : ML Type이 Scalar인 데이터들을 Server ML 작업을 위한 과정을 수행함   
+Server와 통신을 위한 Websocket을 연결한 후 Scalar data 초기 40개를 Model Ready Test를 위해 전송 및 결과값 수신   
+이후 Model Ready 상태이면 초기 40개 이후의 data들을 40개씩 나누어 보내 Server에서 ML 작업을 수행한 결과를 받아 처리함   
+2번째 송신부터는 각 40개씩 처리하는 과정에서의 End-to-End 소요시간, 데이터 처리 소요시간, 대역폭을 계산하여 출력   
+   +**image_connect (ws, port)** : ML Type이 Image인 데이터를 Server ML 작업을 위한 과정을 수행함   
+Scalar 데이터 처리 이후에 연속적으로 시행되기 때문에 사전 Model Test 과정 생략   
+그 외에는 scalar_connect와 동일하게 Image data를 Websocket을 통해 Server로 보내고 작업된 결과를 수신   
+또한 해당 과정에서의 End-to-End 소요시간, 데이터 처리 소요시간, 대역폭을 계산하여 출력   
+
+(3) **Scalar(Deployment_Driver_Profiling_rework.py)**   
+
+(4) **Image(ImageRecognition_original.py)**   
+
 
 ### Acknowledgement
 이 소프트웨어는 2020년도 정부(과학기술정보통신부)의 재원으로 정보통신기술진흥센터의 지원을 받아 수행된 연구임   
