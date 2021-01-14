@@ -38,7 +38,7 @@ Worker node의 구조는 위의 그림과 같다. Linux OS, Nvidia-runtime, pod�
 4. 이후, Client는 스칼라ML, 이미지ML에 대한 동작을 하는 pod에 연결하기 위해 Receive server를 통해 받은 포트번호를 사용하여 접속할 수 있고 1대1로 연결되어 데이터를 주고받는다. (ML 결과값은 웹소켓을 통해 Client로 전송)   
   
 #### 2.2.2 Function specification    
-+ **Receive Server(rcvserver.py)**   
+(1) **Receive Server(rcvserver.py)**   
 Client에서 받은 요청을 기반으로 가용성 확인 및 Edge 서버 Deployment의 전반적인 관리 수행      
    + **create_deployment_object(ml_type)** : ML Type에 따라 Container Resource Requirement를 별도로 설정.   
 
