@@ -40,7 +40,7 @@ Worker node의 구조는 위의 그림과 같다. Linux OS, Nvidia-runtime, pod�
 #### 2.2.2 Function specification    
 + **Receive Server(rcvserver.py)**   
 Client에서 받은 요청을 기반으로 가용성 확인 및 Edge 서버 Deployment의 전반적인 관리 수행      
-++ **create_deployment_object(ml_type)** : ML Type에 따라 Container Resource Requirement를 별도로 설정.   
+   + **create_deployment_object(ml_type)** : ML Type에 따라 Container Resource Requirement를 별도로 설정.   
 
 <pre><code>
    # Scalar Type Resource Setting
@@ -54,13 +54,13 @@ Client에서 받은 요청을 기반으로 가용성 확인 및 Edge 서버 Depl
 
 이후에 Kubernetes Pod 내에서의 node selector 설정과 Edge 서버에 있는 Xavier, tx2 H/W의 Scheduling 설정을 진행   
 기본 설정이 끝난 후 Container와 Pod Template를 생성하고 이를 기반으로 Deployment 객체를 생성 및 반환   
-++ **service_request** : Kubernetes 기본 설정을 처리한 후 Xavier, tx2 H/W의 ML 가용 용량을 설정   
+   + **service_request** : Kubernetes 기본 설정을 처리한 후 Xavier, tx2 H/W의 ML 가용 용량을 설정   
 create_deployment_object를 통해 생성된 Deployment를 기존 Namespace에 생성된 Deployment 유무를 통해 처리를 결정   
 
 **기존 Deployment가 없는 경우**: Namespace 생성 및 생성된 Deployment를 추가   
 **기존 Deployment가 있는 경우**: 사전에 설정된 ML 가용 용량을 확인 후 허용 범위 내이면 생성된 Deployment를 추가. 만약에 ML 가용 용량을 벗어난다면 생성된 Deployment를 기존 Namespace에 추가하지 않고 offloading값을 1로 설정하여 결과 반환. 이 경우 Client에서는 Edge 서버 대신 Center 서버 사용.    
 
-++ **main** : Flask 서버를 초기화하고 동작시킴.   
+   + **main** : Flask 서버를 초기화하고 동작시킴.   
 #### 2.2.4
 
 ### Acknowledgement
