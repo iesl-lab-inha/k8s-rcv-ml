@@ -7,8 +7,9 @@ k8s-rcv-ml
 ### 2.1 Hardware
 엣지 서버는 Master Node, Worker Node로 구성된 클러스터 서버로 kubernetes 플랫폼을 기반으로 한다. 프로그램은 다음과 같은 구조에서 실행되도록 구성되었다.   
 
-<p align="center"><img src="/readme_thumbnail/Hardware env.png" width="30%" height="30%" alt="master"></img></p><br/>   
-#### 2.1.1 MasterNode      
+<p align="center"><img src="/readme_thumbnail/Hardware env.png" width="30%" height="30%" alt="env"></img></p><br/>   
+
+#### 2.1.1 MasterNode   
 **Master node**는 클러스터 전체를 컨트롤하는 역할을 한다. (상태 정보 관리, Worker node에 pod를 할당하고 pod 안에 컨테이너를 띄움 등)   
    
 <p align="center"><img src="/readme_thumbnail/master.png" width="30%" height="25%" alt="master"></img></p><br/>   
