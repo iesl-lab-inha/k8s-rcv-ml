@@ -24,7 +24,7 @@ Master node의 구조는 위의 그림과 같다. Master node는 Docker, Control
 #### WorkerNode   
 **Worker node**는 Master node에 의해 명령을 받고 pod를 호스트한다.     
    
-<img src="/readme_thumbnail/worker.png" width="20%" height="20%" alt="worker"></img><br/>    
+<center> <img src="/readme_thumbnail/worker.png" width="20%" height="20%" alt="worker"></img><br/></center>    
    
 Worker node의 구조는 위의 그림과 같다. Linux OS, Nvidia-runtime, pod로 구성된다.   
 + **Nvidia-runtime**: Nvidia-runtime은 컨테이너 런타임의 하나로 컨테이너 실행을 담당하는 소프트웨어이다. 컨테이너 런타임은 pod를 통해서 배포된 컨테이너를 실행한다. Nvidia 컨테이너 런타임은 OCI(Open Containers Initiative) 사양과 호환되는 GPU 인식 컨테이너 런타임이므로, 컨테이너화 된 GPU 가속 애플리케이션을 구축하고 배포 프로세스를 단순화한다. (Docker에서도 OCI를 사용하므로 호환됨)   
