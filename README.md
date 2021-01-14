@@ -5,9 +5,9 @@ k8s-rcv-ml
 
 ## 2. 실행 환경
 ### 2.1 Hardware
-엣지 서버는 Master Node, Worker Node로 구성된 클러스터 서버로 kubernetes 플랫폼을 기반으로 한다. 프로그램은 다음과 같은 구조에서 실행되도록 구성되었다.
+엣지 서버는 Master Node, Worker Node로 구성된 클러스터 서버로 kubernetes 플랫폼을 기반으로 한다. 프로그램은 다음과 같은 구조에서 실행되도록 구성되었다.   
 
-<p align="center"><img src="/readme_thumbnail/Hardware env.png" width="30%" height="30%" alt="master"></img></p><br/>
+<p align="center"><img src="/readme_thumbnail/Hardware env.png" width="30%" height="30%" alt="master"></img></p><br/>   
 #### 2.1.1 MasterNode   
 **Master node**는 클러스터 전체를 컨트롤하는 역할을 한다. (상태 정보 관리, Worker node에 pod를 할당하고 pod 안에 컨테이너를 띄움 등)   
    
@@ -37,8 +37,8 @@ Worker node의 구조는 위의 그림과 같다. Linux OS, Nvidia-runtime, pod�
 4. 이후, Client는 스칼라ML, 이미지ML에 대한 동작을 하는 pod에 연결하기 위해 Receive server를 통해 받은 포트번호를 사용하여 접속할 수 있고 1대1로 연결되어 데이터를 주고받는다. (ML 결과값은 웹소켓을 통해 Client로 전송)   
   
 #### 2.2.2 Function specification    
-+ **Receive Server(rcvserver.py)**
-Client에서 받은 요청을 기반으로 가용성 확인 및 Edge 서버 Deployment의 전반적인 관리 수행   
++ **Receive Server(rcvserver.py)**   
+Client에서 받은 요청을 기반으로 가용성 확인 및 Edge 서버 Deployment의 전반적인 관리 수행      
 ++ **create_deployment_object(ml_type)** : ML Type에 따라 Container Resource Requirement를 별도로 설정.   
 
 <pre><code>
