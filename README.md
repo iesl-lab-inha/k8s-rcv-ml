@@ -19,7 +19,8 @@ Master node의 구조는 위의 그림과 같다. Master node는 Docker, Control
 + **API server**: Kubernetes의 라이프사이클을 정의, 배포, 관리하기 위해 Kubernetes API를 노출하는 컨트롤 플레인 컴포넌트이다. API 서버는 최종 사용자, 클러스터의 다른 부분 그리고 외부 컴포넌트가 서로 통신할 수 있도록 HTTP API를 제공한다. Kubernetes의 모든 기능을 REST API로 제공하고 그에 대한 명령을 처리한다.   
 + **etcd**: 분산 시스템을 계속 실행하는 데 필요한 중요한 정보를 보관하고 관리하는 데 사용되는 오픈소스 분산 key-value 저장소이다. 모든 클러스터 데이터(Kubernetes의 구성 데이터, 상태 데이터 및 메타 데이터)를 관리한다.       
 + **kube-scheduler**: 스케줄링은 kubelet이 pod를 실행할 수 있도록 pod가 노드에 적합한지 확인하고, pod, 서비스 등의 리소스를 적절한 노드에 할당하는 것이다. (노드가 배정되지 않은 새로 생성된 pod를 감지하고 해당 pod가 실행될 최상의 노드를 선택) 
-+ **kube-controller-manager**: 컨트롤러를 생성하고 이를 각 노드에 배포하며 관리하는 역할을 한다.    
++ **kube-controller-manager**: 컨트롤러를 생성하고 이를 각 노드에 배포하며 관리하는 역할을 한다. 
+   
 #### 2.1.2 WorkerNode   
 **Worker node**는 Master node에 의해 명령을 받고 pod를 호스트한다.     
    
@@ -61,6 +62,7 @@ create_deployment_object를 통해 생성된 Deployment를 기존 Namespace에 �
 > **기존 Deployment가 있는 경우**: 사전에 설정된 ML 가용 용량을 확인 후 허용 범위 내이면 생성된 Deployment를 추가. 만약에 ML 가용 용량을 벗어난다면 생성된 Deployment를 기존 Namespace에 추가하지 않고 offloading값을 1로 설정하여 결과 반환. 이 경우 Client에서는 Edge 서버 대신 Center 서버 사용.    
 
    + **main** : Flask 서버를 초기화하고 동작시킴.   
+   
 (2) **Client(testclient_final.py)**   
 서버 상태를 확인하고 서버에서 처리할 데이터를 사전 처리한 후 전송하여 결과값을 수신   
    + **timer (start, end)** : 입력으로 들어온 start, end 간 시간 간격을 계산하여 반환함   
@@ -87,7 +89,18 @@ Driver Profile에 관한 정보를 입력으로 Machine Learning을 통해 저�
    + **running_ml (websocket, path)**: 실제 Client와 Websocket을 통해 40개씩 데이터를 받고 ML을 통한 결과값을 다시 Client에게 반환함. 초기 40개의 데이터는 ML을 위한 model 데이터 준비에 확인하는 용도이며, 이후 40개부터 실제 예측이 진행됨.   
    + **main**: Client와의 통신을 위한 Websocket을 초기화하고 시작하는 과정을 수행   
 
-(4) **Image(ImageRecognition_original.py)**   
+(4) **Image(ImageRecognition_original.py)**  
+GPU를 사용하여 (2GB Memory 제한 설정) 설정된 이미지를 Train된 model 데이터와 비교하여 이미지 물체를 판별 Model 데이터의 경우 MobileNet 데이터를 사용하며 pruned, original, mobile 세 가지 옵션이 사용 가능함.   
+그 외에 이미지를 판별하는 과정의 소요 시간을 측정해서 표시   
+  + **Model Data Options**   
+++ pruned = MobileNet v1의 Pruning data 사용 (mobilenet_0.h5)   
+++ original = MobileNet v1의 원본 data 사용 (mobilenet_original.h5)   
+++ mobile = MobileNet v2의 원본 data 사용. (Live Download 방식)   
+
+실제 환경 테스트의 경우 아래 running_ml 함수를 통해 진행   
+ + **running_ml (websocket, path)**: MobileNet v1 Pruning Data Model을 로드하고 이 Model을 기준으로 ML 작업 진행. Client에서 Websocket을 통해 받은 Image 관련 Data를 필요한 정보만 남기도록 Trim. Trim된 Data를 UTF-8 형식으로 인코딩 후 ML 작업을 위해 Base64 포맷으로 디코딩 후 이를 이용해 Image 객체로 로드.   
+해당 Image 객체를 224x224 크기로 Resize후 해당 객체를 가지고 ML 예측 작업을 진행.   
+작업 후 나온 ImageNet 데이터 결과 값들을 기존 포맷으로 디코딩 후 Websocket을 통해 Client로 전송.   
 
 
 ### Acknowledgement
