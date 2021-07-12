@@ -1,4 +1,4 @@
-k8s-rcv-ml
+SERVICE MIGRATION
 =================
 # 1. Goal
 클러스터로 구성된 Edge Computing 환경 구성을 위한 서비스 요청을 해결하고, container 환경의 DL 서비스를 지원하기 위해서 구성된 플랫폼을 목표로 한다.   
