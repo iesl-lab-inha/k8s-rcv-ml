@@ -86,7 +86,7 @@ def service_request():
     nm = (ml_type+'-deploy')
     
     #Step2. checking initialize deployment
-   # print("h");
+ 
     scalar_deploy = create_deployment_object('scalar')
     image_deploy = create_deployment_object('image')
     dps = app_v1.list_namespaced_deployment(namespace = nsp)
@@ -97,27 +97,21 @@ def service_request():
                 scalar_deploy.spec.replicas = item.spec.replicas
                 deploy_exist = 1
                 break
-            elif ml_type == 'image':
-                image_deploy.spec.replicas = item.spec.replicas
-                deploy_exist = 1
-                break
+
     #Step3-1. checking offloading confitions
     #May over the spec. then, offloading = 1 and return
-   # print("i");
+
     if deploy_exist == 1:
         if scalar_deploy.spec.replicas >= ml_capacity:
             print("scalar deployment count = {}".format(scalar_deploy.spec.replicas))
             print("ml_capacity = {}".format(ml_capacity))
             print('Nodes are busy')
             return jsonify({'service_port': service_port[ml_type], 'migration':1})
-        #Extra functional for Caching/Offloading functions
-        #we need to caculate new model for how much popular in image, scalar with central data center
-        #considering 4 part gpu, cpu, ram, time
-        #How caculate 4 parts? gpu = plugin, cpu/ram = default, time = timestamp
+
 
     #Doesn't have any target deploy...
     #Step3-2. Deployment create
-    #print("j");
+
     elif deploy_exist == 0:
         if ml_type == 'scalar':
             print('scalar create\n')
@@ -125,15 +119,10 @@ def service_request():
             scalar_dep_resp = app_v1.create_namespaced_deployment(namespace=nsp, body=scalar_deploy);
             scalar_deploy.spec.replicas = scalar_dep_resp.spec.replicas
             deploy_exist = 1;
-        elif ml_type == 'image':
-            print('image create\n')
-            #Before running to create deployment (image)
-            image_dep_resp = app_v1.create_namespaced_deployment(namespace=nsp, body=image_deploy);
-            image_deploy.spec.replicas = image_dep_resp.spec.replicas
-            deploy_exist = 1;
+
 
     #Step4. Increasing replicas
-    #print("k");
+ 
     new_replicas = 0;
     if deploy_exist == 1:
         if ml_type == 'scalar':
@@ -141,14 +130,10 @@ def service_request():
             scalar_deploy.spec.replicas = scalar_deploy.spec.replicas + 1;
             scalar_dep_resp = app_v1.patch_namespaced_deployment_scale(name=(ml_type+'-deploy'), namespace=nsp, body=scalar_deploy)
             new_replicas = scalar_dep_resp.spec.replicas
-        elif ml_type == 'image':
-            print('image patch\n')
-            image_deploy.spec.replicas = image_deploy.spec.replicas + 1;
-            image_dep_resp = app_v1.patch_namespaced_deployment_scale(name=(ml_type+'-deploy'), namespace=nsp, body=image_deploy)
-            new_replicas = image_dep_resp.spec.replicas
+
     
     #Step5. new replicas wait
-    #print("l");
+ 
     dps = app_v1.read_namespaced_deployment(name = nm, namespace=nsp)
     wait_time = 0;
 
@@ -163,9 +148,9 @@ def service_request():
     #print("n");
 
 #####main#####
-#print("o");
+
 if __name__ == '__main__':
-    # print("p");
+
     app.debug = True
     # print("q");
     app.run(host = '192.168.1.11', port=5611)
