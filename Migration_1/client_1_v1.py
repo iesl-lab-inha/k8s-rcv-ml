@@ -54,19 +54,7 @@ def request_to_edge1(ml_type, client_id):
     except Exception as e:
         print(e)
 
-def request_to_center(ml_type, client_id):
-    #print("a4");
-    print('Call the Center API')    
-    if ml_type == 'scalar':
-        resp = requests.post((CENTER+'/driver-class-predict/'+client_id))
-    elif ml_type == 'image':
-        resp = requests.post((CENTER+'/driver-image-recognition/'+client_id))
-    return resp;
-    #print("a5");
-    print(response.json())
-
 async def scalar_connect(ws, port):
-    #print("a6");
     async with websockets.connect(ws+":"+port) as websocket:
         #1. first 40 data is sent(preset)
         skiprow = 0
@@ -142,74 +130,7 @@ async def scalar_connect(ws, port):
                     skiprow = 41;
 
 
-async def image_connect(ws, port):
-    async with websockets.connect((ws+":"+port)) as websocket:
-        #set path for transmit
-        # print("a8");
-        if os.path.exists('./Carla1') is True:
-            #images load Loop
-            print("a9");
-            datalist = os.listdir('./Carla1') 
-            start_time = time.time()
-            res_all = 0
-            cnt = 0
-            bnw = 0
-           # print("a10");
-            for item in datalist:
-                # print("d");
-                #Data set
-                rx_f = open(rx_path, "r");
-                tx_f = open(tx_path, "r");
-                rx_bytes_before = int(rx_f.read());
-                tx_bytes_before = int(tx_f.read());
-                rx_f.close()
-                tx_f.close()
-                #Time set
-                res_start = time.time()
-                
-                item_path = os.path.join('./Carla1',item) 
-                with open(item_path, 'rb') as f:
-                    encoded_string = base64.b64encode(f.read()).decode('utf-8')
-                    image_json =dict()
-                    image_json = { 'data':encoded_string, 'timestamp': str(datetime.utcnow().isoformat(sep=' ', timespec='milliseconds'))}
-                    imgdata = json.dumps(image_json,indent=4);
-                    await websocket.send(imgdata)
-                result = await websocket.recv()
 
-                # Timer calculate
-                res_end = time.time()
-                inter_res = res_end - res_start
-                res_all = res_all + inter_res
-                cnt = cnt + 1
-                elapsed_time = time.time()
-                
-                #Data calculate
-                rx_f = open(rx_path,"r");
-                tx_f = open(tx_path,"r");
-                rx_bytes_after = int(rx_f.read())
-                tx_bytes_after = int(tx_f.read())
-                all_byte = rx_bytes_after - rx_bytes_before + tx_bytes_after - tx_bytes_before
-                bnw = bnw + all_byte
-                rx_f.close()
-                tx_f.close()
-                print("RECEIVE : {}\n End-to-End time : {}\t proceed time : {}".format(result, timer(res_start,res_end), timer(start_time, elapsed_time)))
-                print("Receive bytes : {}".format(all_byte));
-                    
-                if (int(elapsed_time - start_time) >= 300):
-                    print("Result time : {}, Bandwidth : {}, all request : {}".format(res_all/cnt, bnw/cnt, cnt));
-                    break
-
-##argv[1] : neural network type
-##argv[2] : ID
-'''
-Main Client code process
-1. request to edge server(rcv server)
-2-1. 
-(1) if offloading off, start websocket to edge
-2-2.
-(1) if offloading on, request to center server
-(2) start websocket to center
-'''
 
 if __name__ == "__main__":
     try:
@@ -227,7 +148,6 @@ if __name__ == "__main__":
                 time.sleep(16)
                 asyncio.get_event_loop().run_until_complete(image_connect(EDGE_WS, num_port))
         elif resp.json()['migration'] is 1:
-            # print("a13");
             print('migration is 1 :  Request to other cluster')
             resp = request_to_edge1(sys.argv[1], sys.argv[2])
             num_port = resp.json()['service_port']
@@ -238,18 +158,6 @@ if __name__ == "__main__":
             elif sys.argv[1] == 'image':
                 time.sleep(16)
                 asyncio.get_event_loop().run_until_complete(image_connect(EDGE_WS, num_port))
-        end_time=time.time()
-        total_time=end_time-start_time
-        print("TOTAL TIME = {}".format(total_time))
-            
-            #thread_api = threading.Thread(target = request_to_center, args=(sys.argv[1],sys.argv[2]))
-            #thread_api.start()
-            #if sys.argv[1] == 'scalar':
-            #    time.sleep(4)
-            #   asyncio.get_event_loop().run_until_complete(CENTER, scalar_connect('31601')) 
-            #elif sys.argv[1] == 'image':
-            #    time.sleep(16)
-            #    asyncio.get_event_loop().run_until_complete(CENTER, image_connect('31603')) 
-            #thread_api.join()
+
     except Exception as e:
         print(e)
