@@ -14,8 +14,6 @@ import sys
 EDGE = 'http://192.168.1.11:5611/app-service'
 EDGE1 = 'http://192.168.1.20:5601/app-service'
 
-CENTER = 'http://ec2-3-23-18-37.us-east-2.compute.amazonaws.com'
-
 EDGE_WS = "ws://165.246.41.45"
 
 columns=["Long_Term_Fuel_Trim_Bank1","Intake_air_pressure","Accelerator_Pedal_value","Fuel_consumption","Torque_of_friction","Maximum_indicated_engine_torque","Engine_torque","Calculated_LOAD_value", "Activation_of_Air_compressor","Engine_coolant_temperature","Transmission_oil_temperature","Wheel_velocity_front_left-hand","Wheel_velocity_front_right-hand","Wheel_velocity_rear_left-hand", "Torque_converter_speed","Class"]
@@ -84,6 +82,7 @@ async def scalar_connect(ws, port):
                     tx_bytes_before = int(tx_f.read());
                     rx_f.close()
                     tx_f.close()
+                   
                     #Time set
                     res_start = time.time()
                     
@@ -104,6 +103,7 @@ async def scalar_connect(ws, port):
                     res_all = res_all + inter_res
                     cnt = cnt + 1
                     elapsed_time = time.time()
+                    
                     #Data calculate
                     rx_f = open(rx_path,"r");
                     tx_f = open(tx_path,"r");
@@ -113,8 +113,7 @@ async def scalar_connect(ws, port):
                     bnw = bnw + all_byte
                     rx_f.close()
                     tx_f.close()
-                   # print("a7");
-
+                   
                     print("RECEIVE : {}\n End-to-End time : {}\t proceed time : {}".format(result, timer(res_start,res_end), timer(start_time, elapsed_time)))
                     print("Receive bytes : {}".format(all_byte));
                     
@@ -128,9 +127,6 @@ async def scalar_connect(ws, port):
                 skiprow = skiprow + 40
                 if skiprow >= 18670:
                     skiprow = 41;
-
-
-
 
 if __name__ == "__main__":
     try:
