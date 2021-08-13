@@ -1,0 +1,1592 @@
+****************************************************************************************************
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+****************************************************************************************************
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     48 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     48 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       ESTABLISHED 1045/nginx: worker
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp        0      0 172.31.7.139:8080       172.31.7.139:47712      ESTABLISHED 22717/node /home/ub
+tcp        0      0 172.31.7.139:80         165.246.41.45:36916     ESTABLISHED 1045/nginx: worker
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       ESTABLISHED 1045/nginx: worker
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp        0      0 172.31.7.139:8080       172.31.7.139:47712      ESTABLISHED 22717/node /home/ub
+tcp        0      0 172.31.7.139:80         165.246.41.45:36916     ESTABLISHED 1045/nginx: worker
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       ESTABLISHED 1045/nginx: worker
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp        0      0 172.31.7.139:8080       172.31.7.139:47712      ESTABLISHED 22717/node /home/ub
+tcp        0      0 172.31.7.139:80         165.246.41.45:36916     ESTABLISHED 1045/nginx: worker
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       ESTABLISHED 1045/nginx: worker
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp        0      0 172.31.7.139:8080       172.31.7.139:47712      ESTABLISHED 22717/node /home/ub
+tcp        0      0 172.31.7.139:80         165.246.41.45:36916     ESTABLISHED 1045/nginx: worker
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     48 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp        0      1 172.31.7.139:80         165.246.41.45:36916     LAST_ACK    -
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     48 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0    144 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:5700       165.246.41.45:41654     SYN_RECV    -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0    144 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:5700       165.246.41.45:41654     ESTABLISHED 10183/python3.7
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0    247 172.31.7.139:5700       165.246.41.45:41654     ESTABLISHED 10183/python3.7
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:5700       165.246.41.45:41654     ESTABLISHED 10183/python3.7
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0     20 172.31.7.139:5700       165.246.41.45:41654     FIN_WAIT1   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0    144 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0    144 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0    144 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0    144 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0    144 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0    144 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0    144 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0    144 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0    144 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0    144 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0    144 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0    144 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     48 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0    144 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0    144 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     48 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$ sudo netstat -nap | grep tcp
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      7214/systemd-resolv
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1013/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      1676/sshd: ubuntu@p
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN      9016/sshd: ubuntu@p
+tcp        0      0 0.0.0.0:5700            0.0.0.0:*               LISTEN      10183/python3.7
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      590/rpcbind
+tcp        0      0 172.31.7.139:8080       0.0.0.0:*               LISTEN      22717/node /home/ub
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1044/nginx: master
+tcp        0      0 172.31.7.139:51568      169.254.169.254:80      TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:53381     ESTABLISHED 8927/sshd: ubuntu [
+tcp        0      0 172.31.7.139:22         165.246.41.44:63608     ESTABLISHED 1486/sshd: ubuntu [
+tcp        0      0 172.31.7.139:51566      169.254.169.254:80      TIME_WAIT   -
+tcp        0     96 172.31.7.139:22         165.246.41.44:60164     ESTABLISHED 8925/sshd: ubuntu [
+tcp        0      0 172.31.7.139:47712      172.31.7.139:8080       TIME_WAIT   -
+tcp        0      0 172.31.7.139:22         165.246.41.44:61346     ESTABLISHED 1053/sshd: ubuntu [
+tcp6       0      0 :::22                   :::*                    LISTEN      1013/sshd
+tcp6       0      0 :::3000                 :::*                    LISTEN      22617/node
+tcp6       0      0 ::1:6010                :::*                    LISTEN      1676/sshd: ubuntu@p
+tcp6       0      0 ::1:6011                :::*                    LISTEN      9016/sshd: ubuntu@p
+tcp6       0      0 :::111                  :::*                    LISTEN      590/rpcbind
+ubuntu@ip-172-31-7-139:~$
+

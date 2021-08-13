@@ -1,0 +1,1200 @@
+Offloading, Request to Datacenter
+ws open
+Model ready
+Preparing the model...
+model ready get
+start while loop
+Data, time setting end
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+in for loop
+**before send
+**after await send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end
+in for loop
+**before send
+code = 1006 (connection closed abnormally [internal]), no reason
+start while loop
+Data, time setting end

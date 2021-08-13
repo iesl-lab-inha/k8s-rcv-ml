@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rcvserver-deploy
+  labels:
+    apps: rcvserver-app
+spec:
+  replicas: 1
+  selector:
+   matchLabels:
+    app: rcvserver
+  template:
+    metadata:
+     labels:
+       app: rcvserver
+    spec:
+      containers:
+      - name: rcvserver
+        image: jihye1221/receive-server:0613_3
+        args: ["-p","5601"]
+        ports:
+        - containerPort: 5601
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+ name: rcv-svc
+ labels:
+  apps: rcvserver-svc
+spec:
+ clusterIP: 10.110.196.17
+ externalIPs:
+  - 165.246.41.53
+ externalTrafficPolicy: Cluster
+ ports:
+  - nodePort: 31111 #receive server port num
+    port: 80
+    protocol: TCP
+    targetPort: 5601
+ selector:
+  app: rcvserver
+ sessionAffinity: ClientIP
+ type: LoadBalancer
+status:
+ loadBalancer: {}
+

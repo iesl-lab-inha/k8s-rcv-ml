@@ -1,0 +1,6 @@
+FROM jihye1221/receive-server:0611_1
+
+WORKDIR /
+
+ENTRYPOINT ["python3","rcvserver_finalv2_0611_forpod.py"]
+
