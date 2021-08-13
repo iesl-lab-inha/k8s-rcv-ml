@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: scalar
+  namespace: scalar-test
+  name: scalar-svc
+spec:
+  selector:
+   app: scalar
+  sessionAffinity: ClientIP
+  externalIPs:
+   - 165.246.41.53
+  ports:
+   - nodePort: 32222
+     port: 82
+     protocol: TCP
+     targetPort: 5700
+  type: LoadBalancer
+status:
+ loadBalancer: {}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: image
+  namespace: image-test
+  name: image-svc
+spec:
+  selector:
+   app: image
+  sessionAffinity: ClientIP
+  externalIPs:
+   - 165.246.41.53
+  ports:
+   - nodePort: 30033
+     port: 81
+     protocol: TCP
+     targetPort: 5700
+  type: LoadBalancer
+status:
+ loadBalancer: {}
+
