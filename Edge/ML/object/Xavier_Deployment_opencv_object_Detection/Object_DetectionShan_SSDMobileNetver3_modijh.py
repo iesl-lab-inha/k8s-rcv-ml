@@ -19,7 +19,7 @@ model.setInputScale(1.0/127.5) ## 255/2 = 127.5
 model.setInputMean((127.5,127.5,127.5)) ## 
 model.setInputSwapRB(True)
 
-img = cv2.imread('2.jpg')
+img = cv2.imread('5.jpg')
 
 #plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
 start = time.time()
@@ -38,7 +38,7 @@ for ClassInd, conf, boxes in zip(ClassIndex.flatten(), confidece.flatten(), bbox
 End_all = time.time()
 print("[INFO] Total Time took {:.6f} seconds".format(End_all - start_all))
 
-cv2.imwrite("2_result.jpg", img)
+cv2.imwrite("5_result.jpg", img)
 
 #import matplotlib.pyplot as plt
 #plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
