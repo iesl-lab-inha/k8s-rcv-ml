@@ -16,9 +16,9 @@ import sys
 EDGE = 'http://0.0.0.0:31111/app-service'
 #EDGE = 'http://192.168.1.20:5601/app-service' #for rcv host running
 #CENTER = 'http://ec2-3-23-18-37.us-east-2.compute.amazonaws.com'
-CENTER = 'http://ec2-3-135-202-215.us-east-2.compute.amazonaws.com'
+CENTER = 'http://ec2-18-117-146-206.us-east-2.compute.amazonaws.com'
 
-CENTER_WS = 'ws://3.135.202.215'
+CENTER_WS = 'ws://18.117.146.206'
 EDGE_WS = "ws://165.246.41.45"
 
 columns=["Long_Term_Fuel_Trim_Bank1","Intake_air_pressure","Accelerator_Pedal_value","Fuel_consumption","Torque_of_friction","Maximum_indicated_engine_torque","Engine_torque","Calculated_LOAD_value", "Activation_of_Air_compressor","Engine_coolant_temperature","Transmission_oil_temperature","Wheel_velocity_front_left-hand","Wheel_velocity_front_right-hand","Wheel_velocity_rear_left-hand", "Torque_converter_speed","Class"]
