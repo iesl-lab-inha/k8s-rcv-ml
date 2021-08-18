@@ -43,3 +43,25 @@ spec:
 status:
  loadBalancer: {}
 
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: object
+  namespace: object-test
+  name: object-svc
+spec:
+  selector:
+   app: object
+  sessionAffinity: ClientIP
+  externalIPs:
+   - 165.246.41.53
+  ports:
+   - nodePort: 30044
+     port: 81
+     protocol: TCP
+     targetPort: 5700
+  type: LoadBalancer
+status:
+ loadBalancer: {}
