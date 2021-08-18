@@ -26,7 +26,7 @@ EDGE = 'http://0.0.0.0:31111/app-service'
 
 CENTER = 'http://ec2-3-128-30-222.us-east-2.compute.amazonaws.com'
 #CENTER_WS = 'ws://172.31.7.139'
-CENTER_WS = 'ws://3.128.30.222'
+CENTER_WS = 'ws://18.117.146.206'
 
 EDGE_WS = "ws://165.246.41.45"
 
