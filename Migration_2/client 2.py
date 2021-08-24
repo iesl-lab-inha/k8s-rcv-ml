@@ -11,7 +11,7 @@ import time
 import os
 import sys
 
-EDGE = 'http://192.168.1.11:5631/app-service'
+EDGE = 'http://165.246.41.45:32330/app-service'
 
 EDGE_WS = "ws://165.246.41.45"
 
