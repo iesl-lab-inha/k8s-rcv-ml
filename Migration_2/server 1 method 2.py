@@ -10,13 +10,9 @@ from datetime import datetime
 import time
 import os
 import sys
-import asyncio
-import websockets
-import base64
-import pandas as pd
-import json
 
-EDGE2 = 'http://192.168.1.11:5611/app-service'
+
+EDGE2 = 'http://165.246.41.45:32310/app-service'
 EDGE_WS = "ws://165.246.41.45"
 
 def request_to_edge2(ml_type, client_id):
@@ -221,7 +217,7 @@ def service_request():
 
 if __name__ == '__main__':
     app.debug = True
-    app.run(host = '192.168.1.8', port=5631)
+    app.run(host = '0.0.0.0', port=5631)
 
 
 
