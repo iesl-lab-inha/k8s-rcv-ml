@@ -215,6 +215,6 @@ def service_request():
 
 if __name__ == '__main__':
     app.debug = True
-    app.run(host = '192.168.1.11', port=5611)
+    app.run(host = '0.0.0.0', port=5611)
 
 
