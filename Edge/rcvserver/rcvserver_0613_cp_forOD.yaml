@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+ name: rcv-svcod
+ labels:
+  apps: rcvserver-svc
+spec:
+ clusterIP: 10.99.216.50
+ externalIPs:
+  - 165.246.41.53
+ externalTrafficPolicy: Cluster
+ ports:
+  - nodePort: 30001 #receive server port num
+    port: 80
+    protocol: TCP
+    targetPort: 5666
+ selector:
+  app: rcvserver
+ sessionAffinity: ClientIP
+ type: LoadBalancer
+status:
+ loadBalancer: {}
+

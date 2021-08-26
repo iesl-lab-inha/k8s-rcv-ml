@@ -17,7 +17,8 @@ def create_deployment_object(ml_type):
     if ml_type == 'image':
         res = client.V1ResourceRequirements(requests={"memory":"4882812Ki"},limits={"memory":"5371094Ki"})
     if ml_type == 'object':
-        res = client.V1ResourceRequirements(requests={"memory":"xxxxxxxxx"},limits={"memory":"xxxxxxxxx"}) #memory requests and limits will be changed
+        res = client.V1ResourceRequirements(requests={"memory":"4882812Ki"},limits={"memory":"5371094Ki"}) #memory requests and limits will be changed
+    
     #node required affinity(Hard)
     match_express = [client.V1NodeSelectorRequirement(key='machine',operator='NotIn',values=['nano',]),]
     node_selector = client.V1NodeSelector(node_selector_terms = [client.V1NodeSelectorTerm(match_expressions=match_express),])
@@ -31,9 +32,9 @@ def create_deployment_object(ml_type):
 
     #Container obj
     if ml_type == 'object':
-        container = client.V1Container(name = ml_type, image=('wnghks3030/'+ ml_type +':finalv2'), ports=[client.V1ContainerPort(container_port=5700)],resources=res)
+        container = client.V1Container(name = ml_type, image=('jihye1221/0825:3_justtest_combine9_1'), ports=[client.V1ContainerPort(container_port=5700)],resources=res)
     else:
-        container = client.V1Container(name = ml_type, image=('xxxxxxxxxxxxx'), ports=[client.V1ContainerPort(container_port=5700)],resources=res)
+        container = client.V1Container(name = ml_type, image=('wnghks3030/'+ ml_type +':finalv2'), ports=[client.V1ContainerPort(container_port=5700)],resources=res)
     #Pod obj
     template = client.V1PodTemplateSpec(metadata=client.V1ObjectMeta(labels={"app": ml_type}), spec=client.V1PodSpec(containers=[container], affinity=affinity))
     #Deployment obj
@@ -62,8 +63,8 @@ def disconeect():
     c = client.Configuration()
     c.debug = True
 
-    config.load_incluster_config() #may code run on pods
-    #config.load_kube_config()   #may code run on host
+    #config.load_incluster_config() #may code run on pods
+    config.load_kube_config()   #may code run on host **************************************************************
 
     #object in kubernetes API, this object call the function
     core_v1 = client.CoreV1Api() #api_client=client.ApiClient(configuration = c))
@@ -82,6 +83,7 @@ def disconeect():
                 image_deploy = create_deployment_object('image')
                 image_deploy.spec.replicas = item.spec.replicas - 1
                 image_dep_resp = app_v1.patch_namespaced_deployment_scale(name=nm, namespace=nsp, bosy= image_deploy)
+            #elif 
 
 #Request service for ml_type = {scalar, image}, nsp(username or already make)
 @app.route('/app-service',methods=['GET','POST'])
@@ -90,13 +92,13 @@ def service_request():
     c = client.Configuration()
     c.debug = True
 
-    config.load_incluster_config() #may code run on pods
-    #config.load_kube_config()   #may code run on host
+    #config.load_incluster_config() #may code run on pods
+    config.load_kube_config()   #may code run on host
 
     #object in kubernetes API, this object call the function
     core_v1 = client.CoreV1Api() #api_client=client.ApiClient(configuration = c))
     app_v1 = client.AppsV1Api()
-    service_port = {'scalar':'32220', 'image':'30030', 'object':'xxxxx'}
+    service_port = {'scalar':'32220', 'image':'30030', 'object':'30040'}
 
     #read nodes list, node's count
     xavier_label = "machine=xavier"
@@ -206,5 +208,5 @@ def service_request():
 #####main#####
 if __name__ == '__main__':
     app.debug = True
-    app.run(host = '192.168.1.20', port=5601)
+    app.run(host = '0.0.0.0', port=5666)
 
