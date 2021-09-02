@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+<<<<<<< HEAD
 import websockets
 import json
 import time
@@ -41,6 +42,17 @@ async def running_ml(websocket, path):
 
 
 
+=======
+
+# Load Yolo
+net = cv2.dnn.readNet("yolov3.weights", "yolov3.cfg")
+classes = []
+with open("coco.names", "r") as f:
+    classes = [line.strip() for line in f.readlines()]
+layer_names = net.getLayerNames()
+output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
+colors = np.random.uniform(0, 255, size=(len(classes), 3))
+>>>>>>> dbf1df94c22ed3c1e824e8a39265ba2bd7b060a1
 
 # Loading image
 img = cv2.imread("2.jpg")
@@ -92,6 +104,7 @@ for i in range(len(boxes)):
 cv2.imshow("Image", img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+<<<<<<< HEAD
 
 
 # Main started here
@@ -99,3 +112,5 @@ start_server = websockets.serve(running_ml, '0.0.0.0', 5700);
 print('object_server_running')
 asyncio.get_event_loop().run_until_complete(start_server);
 asyncio.get_event_loop().run_forever()
+=======
+>>>>>>> dbf1df94c22ed3c1e824e8a39265ba2bd7b060a1

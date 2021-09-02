@@ -13,6 +13,7 @@ import sys
 
 #EDGE = 'http://165.246.41.45:5601/app-service' #for rcv pod running
 #EDGE = 'http://165.246.41.45:31111/app-service' #for rcv pod running
+<<<<<<< HEAD
 EDGE = 'http://165.246.41.45:31111/app-service'
 #EDGE = 'http://165.246.41.45:5666/app-service' #for rcv host running
 #CENTER = 'http://ec2-3-23-18-37.us-east-2.compute.amazonaws.com'
@@ -20,12 +21,24 @@ EDGE = 'http://165.246.41.45:31111/app-service'
 CENTER = 'http://3.22.66.65:8080'
 
 CENTER_WS = 'ws://3.22.66.65'
+=======
+EDGE = 'http://0.0.0.0:31111/app-service'
+#EDGE = 'http://192.168.1.20:5601/app-service' #for rcv host running
+#CENTER = 'http://ec2-3-23-18-37.us-east-2.compute.amazonaws.com'
+CENTER = 'http://ec2-18-117-146-206.us-east-2.compute.amazonaws.com'
+
+CENTER_WS = 'ws://18.117.146.206'
+>>>>>>> dbf1df94c22ed3c1e824e8a39265ba2bd7b060a1
 EDGE_WS = "ws://165.246.41.45"
 
 columns=["Long_Term_Fuel_Trim_Bank1","Intake_air_pressure","Accelerator_Pedal_value","Fuel_consumption","Torque_of_friction","Maximum_indicated_engine_torque","Engine_torque","Calculated_LOAD_value", "Activation_of_Air_compressor","Engine_coolant_temperature","Transmission_oil_temperature","Wheel_velocity_front_left-hand","Wheel_velocity_front_right-hand","Wheel_velocity_rear_left-hand", "Torque_converter_speed","Class"]
 
 classes= ['A','B','C','D','E','F','G','H','I','J']
+<<<<<<< HEAD
 tx_path = "/sys/class/net/wlan0/statistics/tx_bytes" #important
+=======
+tx_path = "/sys/class/net/wlan0/statistics/tx_bytes"
+>>>>>>> dbf1df94c22ed3c1e824e8a39265ba2bd7b060a1
 rx_path = "/sys/class/net/wlan0/statistics/rx_bytes"
 
 def timer(start, end):
@@ -34,7 +47,10 @@ def timer(start, end):
 
 def request_to_edge(ml_type, client_id):
     try:
+<<<<<<< HEAD
         print("in request_to_edge")
+=======
+>>>>>>> dbf1df94c22ed3c1e824e8a39265ba2bd7b060a1
         tm = str(datetime.utcnow().isoformat(sep=' ', timespec='milliseconds'))
         para_dict={"type" : ml_type, "clientID" : client_id, "clienttime" :tm}
         print(str(para_dict))
@@ -196,8 +212,11 @@ Main Client code process
 if __name__ == "__main__":
     try:
         resp = request_to_edge(sys.argv[1], sys.argv[2])
+<<<<<<< HEAD
         #print("resp-------------------")
         #print(resp)
+=======
+>>>>>>> dbf1df94c22ed3c1e824e8a39265ba2bd7b060a1
         if resp.json()['offloading'] is not 1:
             num_port = resp.json()['service_port']
             print("service port : {}".format(num_port))
@@ -213,7 +232,11 @@ if __name__ == "__main__":
             thread_api.start()
             if sys.argv[1] == 'scalar':
                 time.sleep(4)
+<<<<<<< HEAD
                 asyncio.get_event_loop().run_until_complete(scalar_connect(CENTER_WS, '5702')) 
+=======
+                asyncio.get_event_loop().run_until_complete(scalar_connect(CENTER_WS, '5700')) 
+>>>>>>> dbf1df94c22ed3c1e824e8a39265ba2bd7b060a1
             elif sys.argv[1] == 'image':
                 time.sleep(16)
                 asyncio.get_event_loop().run_until_complete(CENTER, image_connect('30003')) #nodeport
