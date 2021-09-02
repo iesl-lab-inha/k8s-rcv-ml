@@ -11,21 +11,29 @@ import time
 import os
 import sys
 
+#logging for websockets
+import logging
+
+logger = logging.getLogger('websockets')
+logger.setLevel(logging.INFO)
+logger.addHandler(logging.StreamHandler())
+
 #EDGE = 'http://165.246.41.45:5601/app-service' #for rcv pod running
 #EDGE = 'http://165.246.41.45:31111/app-service' #for rcv pod running
-EDGE = 'http://165.246.41.45:31111/app-service'
-#EDGE = 'http://165.246.41.45:5666/app-service' #for rcv host running
+EDGE = 'http://0.0.0.0:31111/app-service'
+#EDGE = 'http://192.168.1.20:5601/app-service' #for rcv host running
 #CENTER = 'http://ec2-3-23-18-37.us-east-2.compute.amazonaws.com'
-#CENTER = 'http://ec2-3-15-198-234.us-east-2.compute.amazonaws.com:8081'
-CENTER = 'http://3.22.66.65:8080'
 
-CENTER_WS = 'ws://3.22.66.65'
+CENTER = 'http://ec2-18-191-225-96.us-east-2.compute.amazonaws.com'
+#CENTER_WS = 'ws://172.31.7.139'
+CENTER_WS = 'ws://3.142.133.220'
+
 EDGE_WS = "ws://165.246.41.45"
 
 columns=["Long_Term_Fuel_Trim_Bank1","Intake_air_pressure","Accelerator_Pedal_value","Fuel_consumption","Torque_of_friction","Maximum_indicated_engine_torque","Engine_torque","Calculated_LOAD_value", "Activation_of_Air_compressor","Engine_coolant_temperature","Transmission_oil_temperature","Wheel_velocity_front_left-hand","Wheel_velocity_front_right-hand","Wheel_velocity_rear_left-hand", "Torque_converter_speed","Class"]
 
 classes= ['A','B','C','D','E','F','G','H','I','J']
-tx_path = "/sys/class/net/wlan0/statistics/tx_bytes" #important
+tx_path = "/sys/class/net/wlan0/statistics/tx_bytes"
 rx_path = "/sys/class/net/wlan0/statistics/rx_bytes"
 
 def timer(start, end):
@@ -34,7 +42,6 @@ def timer(start, end):
 
 def request_to_edge(ml_type, client_id):
     try:
-        print("in request_to_edge")
         tm = str(datetime.utcnow().isoformat(sep=' ', timespec='milliseconds'))
         para_dict={"type" : ml_type, "clientID" : client_id, "clienttime" :tm}
         print(str(para_dict))
@@ -66,15 +73,22 @@ async def scalar_connect(ws, port):
             stdata1 = json.dumps(parsed[skiprow])
             await websocket.send(stdata1)
         data = await websocket.recv()
+        print(data)
         print('Preparing the model...');
         if data == 'Model ready':
+            #a = await websocket.recv()
+            #print(a)
+            print('model ready get')
             #2. Each 1 line data is sent
             skiprow = 41
             res_all = 0
             cnt = 0;
             bnw = 0;
             start_time = time.time()
+
+            #while 시작
             while True:
+                print('start while loop')
                 try:
                     #Data set
                     rx_f = open(rx_path, "r");
@@ -85,17 +99,24 @@ async def scalar_connect(ws, port):
                     tx_f.close()
                     #Time set
                     res_start = time.time()
+                    print('Data, time setting end')
                     
                     #WS
                     df = pd.read_csv('full_data_test.csv',skiprows=range(1,skiprow), usecols=columns, nrows=40);
                     df_json = df.to_json(orient='records')
                     parsed = json.loads(df_json)
+
+
                     for i in range(0,40):
+                        ##print('in for loop')
                         temp = {'timestamp' : datetime.utcnow().isoformat(sep=' ',timespec='milliseconds')}
                         parsed[i].update(temp)
                         stdata = json.dumps(parsed[i])
-                        await websocket.send(stdata)
+                        ##print('**before send') 
+                        await websocket.send(stdata) 
+                        ##print('**after await send')
                     result = await websocket.recv()
+                    #print('result: {}'.format(result))
                     
                     # Timer calculate
                     res_end = time.time()
@@ -129,15 +150,18 @@ async def scalar_connect(ws, port):
 
 
 async def image_connect(ws, port):
+    print("before ws connection")
     async with websockets.connect((ws+":"+port)) as websocket:
         #set path for transmit
         if os.path.exists('./ep0') is True: #previous: './Carla1'
+            print("ep0 is here")
             #images load Loop
             datalist = os.listdir('./ep0') #previous: './Carla1'
             start_time = time.time()
             res_all = 0
             cnt = 0
             bnw = 0
+            print("before for loop")
             for item in datalist:
                 #Data set
                 rx_f = open(rx_path, "r");
@@ -152,9 +176,13 @@ async def image_connect(ws, port):
                 item_path = os.path.join('./ep0',item) #previous: './Carla1'
                 with open(item_path, 'rb') as f:
                     encoded_string = base64.b64encode(f.read()).decode('utf-8')
+                    print(type.encoded_string)
                     image_json =dict()
+                    print(type.image_json)
                     image_json = { 'data':encoded_string, 'timestamp': str(datetime.utcnow().isoformat(sep=' ', timespec='milliseconds'))}
+                    print(type.image_json)
                     imgdata = json.dumps(image_json,indent=4);
+                    print(type.imgdata)
                     await websocket.send(imgdata)
                 result = await websocket.recv()
 
@@ -181,42 +209,28 @@ async def image_connect(ws, port):
                     print("Result time : {}, Bandwidth : {}, all request : {}".format(res_all/cnt, bnw/cnt, cnt));
                     break
 
-##argv[1] : neural network type
-##argv[2] : ID
-'''
-Main Client code process
-1. request to edge server(rcv server)
-2-1. 
-(1) if offloading off, start websocket to edge
-2-2.
-(1) if offloading on, request to center server
-(2) start websocket to center
-'''
+
 
 if __name__ == "__main__":
     try:
-        resp = request_to_edge(sys.argv[1], sys.argv[2])
-        #print("resp-------------------")
-        #print(resp)
-        if resp.json()['offloading'] is not 1:
-            num_port = resp.json()['service_port']
-            print("service port : {}".format(num_port))
-            if sys.argv[1] == 'scalar':
-                time.sleep(5)
-                asyncio.get_event_loop().run_until_complete(scalar_connect(EDGE_WS, num_port))
-            elif sys.argv[1] == 'image':
-                time.sleep(16)
-                asyncio.get_event_loop().run_until_complete(image_connect(EDGE_WS, num_port))
-        elif resp.json()['offloading'] is 1:
-            print('Offloading, Request to Datacenter')
-            thread_api = threading.Thread(target = request_to_center, args=(sys.argv[1],sys.argv[2]))
-            thread_api.start()
-            if sys.argv[1] == 'scalar':
-                time.sleep(4)
-                asyncio.get_event_loop().run_until_complete(scalar_connect(CENTER_WS, '5702')) 
-            elif sys.argv[1] == 'image':
-                time.sleep(16)
-                asyncio.get_event_loop().run_until_complete(CENTER, image_connect('30003')) #nodeport
-            thread_api.join()
+        #resp = request_to_edge(sys.argv[1], sys.argv[2])
+        #if resp.json()['offloading'] is not 1:
+        #    num_port = resp.json()['service_port']
+        #    print("service port : {}".format(num_port))
+        #    if sys.argv[1] == 'scalar':
+        #        time.sleep(5)
+        #        asyncio.get_event_loop().run_until_complete(scalar_connect(EDGE_WS, num_port))
+        #elif resp.json()['offloading'] is 1:
+        print('Offloading, Request to Datacenter')
+        #thread_api = threading.Thread(target = request_to_center, args=("image","30330"))
+        #thread_api.start()
+        #if sys.argv[1] == 'scalar':
+            #time.sleep(4)
+            #asyncio.get_event_loop().run_until_complete(scalar_connect(CENTER_WS, '5702')) #nodeport
+        if sys.argv[1] == 'image':
+            time.sleep(16)
+            asyncio.get_event_loop().run_until_complete(image_connect(CENTER_WS, '5700')) #nodeport (previous: 30003)
+            #asyncio.get_event_loop().run_until_complete(CENTER, image_connect('30003')) #nodeport
+        #thread_api.join()
     except Exception as e:
         print(e)

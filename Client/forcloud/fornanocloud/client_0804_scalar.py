@@ -26,7 +26,7 @@ EDGE = 'http://0.0.0.0:31111/app-service'
 
 CENTER = 'http://ec2-18-191-225-96.us-east-2.compute.amazonaws.com'
 #CENTER_WS = 'ws://172.31.7.139'
-CENTER_WS = 'ws://18.191.225.96'
+CENTER_WS = 'ws://3.22.66.65'
 
 EDGE_WS = "ws://165.246.41.45"
 
@@ -162,7 +162,7 @@ if __name__ == "__main__":
             #thread_api.start()
         if sys.argv[1] == 'scalar':
             time.sleep(4)
-            asyncio.get_event_loop().run_until_complete(scalar_connect(CENTER_WS, '5700')) #nodeport
+            asyncio.get_event_loop().run_until_complete(scalar_connect(CENTER_WS, '5702')) #nodeport
             #thread_api.join()
     except Exception as e:
         print(e)

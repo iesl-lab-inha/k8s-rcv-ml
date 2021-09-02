@@ -216,7 +216,7 @@ if __name__ == "__main__":
                 asyncio.get_event_loop().run_until_complete(scalar_connect(CENTER_WS, '5702')) 
             elif sys.argv[1] == 'image':
                 time.sleep(16)
-                asyncio.get_event_loop().run_until_complete(CENTER, image_connect('30003')) #nodeport
+                asyncio.get_event_loop().run_until_complete(CENTER, image_connect('5703')) #nodeport (previous: 30003)
             thread_api.join()
     except Exception as e:
         print(e)

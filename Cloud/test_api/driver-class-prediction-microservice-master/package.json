@@ -1,0 +1,44 @@
+{
+  "name": "driver-class-prediction-api",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "ts-node ./bin/www",
+    "dev": "set DEBUG=* & ts-node ./bin/www",
+    "start-node": "node ./bin/www",
+    "dev-node": "set DEBUG=* & node ./bin/www",
+    "ts:c": "tsc -p tsconfig.json",
+    "lint": "tslint -c ./configs/tslint.json -p ./tsconfig.json -t codeFrame",
+    "lintfix": "tslint -c ./configs/tslint.json -p ./tsconfig.json -t codeFrame --fix"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.4",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
+    "debug": "~4.1.0",
+    "express": "^4.16.4",
+    "fast-json-stringify": "^2.2.7",
+    "fs-extra": "^7.0.1",
+    "http-errors": "~1.7.1",
+    "moment": "^2.22.2",
+    "morgan": "^1.9.1",
+    "node-pre-gyp": "^0.12.0",
+    "pug": "2.0.3",
+    "ts-node": "^7.0.1"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/cookie-parser": "^1.4.1",
+    "@types/cors": "^2.8.4",
+    "@types/express": "^4.16.0",
+    "@types/fs-extra": "^5.0.4",
+    "@types/http-errors": "^1.6.1",
+    "@types/jsonwebtoken": "^8.3.0",
+    "@types/morgan": "^1.7.35",
+    "@types/node": "^14.10.1",
+    "tslint": "^5.10.0",
+    "tslint-eslint-rules": "^5.3.1",
+    "typescript": "^3.9.7"
+  }
+}
