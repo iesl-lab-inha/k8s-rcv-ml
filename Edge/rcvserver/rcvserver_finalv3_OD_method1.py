@@ -18,7 +18,7 @@ def create_deployment_object(ml_type):
         res = client.V1ResourceRequirements(requests={"memory":"4882812Ki"},limits={"memory":"5371094Ki"})
     if ml_type == 'object':
         res = client.V1ResourceRequirements(requests={"memory":"4882812Ki"},limits={"memory":"5371094Ki"}) #memory requests and limits will be changed
-    
+
     #node required affinity(Hard)
     match_express = [client.V1NodeSelectorRequirement(key='machine',operator='NotIn',values=['nano',]),]
     node_selector = client.V1NodeSelector(node_selector_terms = [client.V1NodeSelectorTerm(match_expressions=match_express),])
@@ -90,7 +90,7 @@ def service_request():
     #config for kubernetes
     c = client.Configuration()
     c.debug = True
-
+    
     #config.load_incluster_config() #may code run on pods
     config.load_kube_config()   #may code run on host
 

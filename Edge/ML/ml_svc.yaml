@@ -61,7 +61,7 @@ spec:
    - nodePort: 30044
      port: 81
      protocol: TCP
-     targetPort: 5700
+     targetPort: 5705
   type: LoadBalancer
 status:
  loadBalancer: {}

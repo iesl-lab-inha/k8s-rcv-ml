@@ -34,7 +34,7 @@ def timer(start, end):
 
 def request_to_edge(ml_type, client_id):
     try:
-        print("in request_to_edge")
+        #print("in request_to_edge")
         tm = str(datetime.utcnow().isoformat(sep=' ', timespec='milliseconds'))
         para_dict={"type" : ml_type, "clientID" : client_id, "clienttime" :tm}
         print(str(para_dict))
@@ -216,7 +216,8 @@ if __name__ == "__main__":
                 asyncio.get_event_loop().run_until_complete(scalar_connect(CENTER_WS, '5702')) 
             elif sys.argv[1] == 'image':
                 time.sleep(16)
-                asyncio.get_event_loop().run_until_complete(CENTER, image_connect('5703')) #nodeport (previous: 30003)
+                asyncio.get_event_loop().run_until_complete(image_connect(CENTER_WS, '5703')) #nodeport (previous: 30003)
+                #asyncio.get_event_loop().run_until_complete(CENTER, image_connect('30003')) #nodeport
             thread_api.join()
     except Exception as e:
         print(e)
