@@ -17,9 +17,9 @@ EDGE = 'http://165.246.41.45:31111/app-service'
 #EDGE = 'http://165.246.41.45:5666/app-service' #for rcv host running
 #CENTER = 'http://ec2-3-23-18-37.us-east-2.compute.amazonaws.com'
 #CENTER = 'http://ec2-3-15-198-234.us-east-2.compute.amazonaws.com:8081'
-CENTER = 'http://3.22.66.65:8080'
+CENTER = 'http://3.16.135.32:8080'
 
-CENTER_WS = 'ws://3.22.66.65'
+CENTER_WS = 'ws://3.16.135.32'
 EDGE_WS = "ws://165.246.41.45"
 
 columns=["Long_Term_Fuel_Trim_Bank1","Intake_air_pressure","Accelerator_Pedal_value","Fuel_consumption","Torque_of_friction","Maximum_indicated_engine_torque","Engine_torque","Calculated_LOAD_value", "Activation_of_Air_compressor","Engine_coolant_temperature","Transmission_oil_temperature","Wheel_velocity_front_left-hand","Wheel_velocity_front_right-hand","Wheel_velocity_rear_left-hand", "Torque_converter_speed","Class"]
@@ -35,11 +35,11 @@ def timer(start, end):
 def request_to_edge(ml_type, client_id):
     try:
         #print("in request_to_edge")
-        tm = str(datetime.utcnow().isoformat(sep=' ', timespec='milliseconds'))
+        tm = str(datetime.utcnow().isoformat(sep=' ', timespec='milliseconds')) #[client -> edge] time to send reqeust
         para_dict={"type" : ml_type, "clientID" : client_id, "clienttime" :tm}
         print(str(para_dict))
-        resp = requests.get(EDGE, params=para_dict)
-        return resp;
+        resp = requests.get(EDGE, params=para_dict) #send request with tm
+        return resp; #receive response offlading_flag, service port
     except Exception as e:
         print(e)
 
@@ -131,9 +131,9 @@ async def scalar_connect(ws, port):
 async def image_connect(ws, port):
     async with websockets.connect((ws+":"+port)) as websocket:
         #set path for transmit
-        if os.path.exists('./ep0') is True: #previous: './Carla1'
+        if os.path.exists('./ep1') is True: #previous: './Carla1'
             #images load Loop
-            datalist = os.listdir('./ep0') #previous: './Carla1'
+            datalist = os.listdir('./epi') #previous: './Carla1'
             start_time = time.time()
             res_all = 0
             cnt = 0
@@ -149,7 +149,7 @@ async def image_connect(ws, port):
                 #Time set
                 res_start = time.time()
                 
-                item_path = os.path.join('./ep0',item) #previous: './Carla1'
+                item_path = os.path.join('./ep1',item) #previous: './Carla1'
                 with open(item_path, 'rb') as f:
                     encoded_string = base64.b64encode(f.read()).decode('utf-8')
                     image_json =dict()
