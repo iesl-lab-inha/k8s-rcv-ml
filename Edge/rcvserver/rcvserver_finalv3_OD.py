@@ -146,7 +146,8 @@ def service_request():
     #Step3-1. checking offloading confitions
     #May over the spec. then, offloading = 1 and return
     if deploy_exist == 1:
-        if scalar_deploy.spec.replicas >= ml_capacity: #************************************************************************this line will be modified
+        #if scalar_deploy.spec.replicas >= ml_capacity:
+        if object_deploy.spec.replicas >= ml_capacity: #************************************************************************this line will be modified
             return jsonify({'service_port': service_port[ml_type], 'offloading':1})
         #Extra functional for Caching/Offloading functions
         #we need to caculate new model for how much popular in image, scalar with central data center
