@@ -1,6 +1,5 @@
-FROM jihye1221/0914:main_new_1
+FROM jihye1221/darknet:1129_coco_1
+  
+WORKDIR /jetson-inference/darknet/
 
-WORKDIR /opencv/opencv-4.2.0/build/
-
-ENTRYPOINT ["python3","main_new_1.py"]
-
+ENTRYPOINT ["python3","main_time.py"]

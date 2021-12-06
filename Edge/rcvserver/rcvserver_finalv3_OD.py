@@ -34,7 +34,8 @@ def create_deployment_object(ml_type):
     if ml_type == 'object':
         #container = client.V1Container(name = ml_type, image=('jihye1221/0825:3_justtest_combine9_1'), ports=[client.V1ContainerPort(container_port=5705)],resources=res)
         #container = client.V1Container(name = ml_type, image=('jihye1221/0825:3_justtest_combine9_1'), ports=[client.V1ContainerPort(container_port=5705)])
-        container = client.V1Container(name = ml_type, image=('jihye1221/darknet:1013_3_time_runpy'), ports=[client.V1ContainerPort(container_port=5705)],resources=res)
+        #container = client.V1Container(name = ml_type, image=('jihye1221/darknet:1013_3_time_runpy'), ports=[client.V1ContainerPort(container_port=5705)],resources=res)
+        container = client.V1Container(name = ml_type, image=('jihye1221/darknet:1129_coco_1_runpy'), ports=[client.V1ContainerPort(container_port=5705)],resources=res)
     else:
         container = client.V1Container(name = ml_type, image=('wnghks3030/'+ ml_type +':finalv2'), ports=[client.V1ContainerPort(container_port=5700)],resources=res)
     #Pod obj
