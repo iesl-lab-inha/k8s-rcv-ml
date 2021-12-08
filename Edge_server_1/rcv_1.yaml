@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rcvserver-deploy
+  labels:
+    apps: rcvserver-app
+spec:
+  replicas: 1
+  selector:
+   matchLabels:
+    app: rcvserver
+  template:
+    metadata:
+     labels:
+       app: rcvserver
+    spec:
+      containers:
+      - name: rcvserver
+        image: sri2301/rm:v3
+        args: ["-p","5631"]
+        ports:
+        - containerPort: 5631
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+ name: rcv-svc
+ labels:
+  apps: rcvserver-svc
+spec:
+ clusterIP: 10.110.196.1
+ externalIPs:
+  - 165.246.41.185
+ externalTrafficPolicy: Cluster
+ ports:
+  - nodePort: 32331  
+    port: 80
+    protocol: TCP
+    targetPort: 5631
+ selector:
+  app: rcvserver
+ sessionAffinity: ClientIP
+ type: LoadBalancer
+status:
+ loadBalancer: {}
+---
