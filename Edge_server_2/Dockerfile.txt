@@ -1,0 +1,7 @@
+FROM sri2301/rs:v1
+
+WORKDIR /
+
+COPY server2_k8s.py .
+
+ENTRYPOINT ["python3","server2_k8s.py"]
