@@ -1,10 +1,43 @@
 SERVICE MIGRATION
 =================
 # 1. Goal
-클러스터로 구성된 Edge Computing 환경 구성을 위한 서비스 요청을 해결하고, container 환경의 DL 서비스를 지원하기 위해서 구성된 플랫폼을 목표로 한다.   
 
-## 2. 실행 환경
-### 2.1 Hardware
+Development of service Migration Technology that complements the stability of the edge cloud.
+Provides solution for handling user requests in the edge plane without the requirement of the central cloud.
+
+# 2. Hardware and software specifications
+```
+Device              NVIDIA Jetson Xavier AGX (Jetpack 4.4.1 L4T 32.4.4)
+GPU                 512-core Volta GPU with Tensor Cores
+CPU                 8-core ARM v8.2 64-bit CPU, 8 MB L2 + 4 MB L3
+Network Module      Intel AC9560, AGW 200
+OS/Kernel           Linux Ubuntu 18.04, Tegra 4.9
+Kubernetes          Kubernetes 1.18
+Docker              19.03.6
+TensorFlow          1.15.0
+```
+For service migration, two edge clusters were developed. Each edge cluster has one master node and one worker node with similar configurations.
+
+# 3. Deep learning Applications Used
+
+1. Driver Behaviour Profiling Application
+2. Image Recognition
+
+# 4. Methodology
+
+## Assumptions
+
+* Involves multiple edge clusters and movement of user services from one edge cluster to another edge cluster.
+* Each edge cluster has a coverage point upto which it can provide its service.
+* Migration scenarios : Insufficient resources & Client mobility
+
+##  Migration due to insufficient resources
+Edge resources should possess enough computing resources to process the request sent by the client. In particular to our scenario, evaluation is performed on memory availability. If there are insufficient memory, then the requests are migrated to the nearby edge clusters.
+
+
+
+
+
 
 
 
