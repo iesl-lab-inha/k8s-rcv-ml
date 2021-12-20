@@ -41,14 +41,11 @@ For service migration, two edge clusters were developed. Each edge cluster has o
 * Blockchain is used to find the right destination edge cluster
 * When client moves out of range, container metadata information(source_ip, container_id, size, cpu, gpu) of the running container is shared to the blockchain network.
 * The destination node self evaluates itself to handle the container 
-* It is done by comparing the container information with the current edge cluster if it can handle the migration container.
-
-
-
-
-
-
-
+* Based on the result of the operation, containers ar emigrated through container image migration method. 
+* At source, convert of container into an image and transfer through docker repository. At destination, pull the image and start the container.
+* It Provides service continuity and prevents connectivity issues.
+* The overall migration time depends on the container sizes.
+ 
 
 ### Acknowledgement
 이 소프트웨어는 2020년도 정부(과학기술정보통신부)의 재원으로 정보통신기술진흥센터의 지원을 받아 수행된 연구임   
