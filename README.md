@@ -32,7 +32,16 @@ For service migration, two edge clusters were developed. Each edge cluster has o
 * Migration scenarios : Insufficient resources & Client mobility
 
 ##  Migration due to insufficient resources
-Edge resources should possess enough computing resources to process the request sent by the client. In particular to our scenario, evaluation is performed on memory availability. If there are insufficient memory, then the requests are migrated to the nearby edge clusters.
+* Edge resources should possess enough computing resources to process the request sent by the client. In particular to our scenario, evaluation is performed on memory availability. If there are insufficient memory, then the service requests are migrated to the nearby edge clusters. 
+* Provides load balancing of requests and efficient resource utilisation on the edge plane.
+* Prevents service request waiting time for processing.
+
+##  Migration due to client mobility
+* Service containers are migrtated during runtime from the source to destination edge cluster.
+* Blockchain is used to find the right destination edge cluster
+* When client moves out of range, container metadata information(source_ip, container_id, size, cpu, gpu) of the running container is shared to the blockchain network.
+* The destination node self evaluates itself to handle the container 
+* It is done by comparing the container information with the current edge cluster if it can handle the migration container.
 
 
 
