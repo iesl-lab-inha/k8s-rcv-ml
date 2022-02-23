@@ -131,9 +131,9 @@ async def scalar_connect(ws, port):
 async def image_connect(ws, port):
     async with websockets.connect((ws+":"+port)) as websocket:
         #set path for transmit
-        if os.path.exists('./ep1') is True: #previous: './Carla1'
+        if os.path.exists('./ep0') is True: #previous: './Carla1'
             #images load Loop
-            datalist = os.listdir('./epi') #previous: './Carla1'
+            datalist = os.listdir('./ep0') #previous: './Carla1'
             start_time = time.time()
             res_all = 0
             cnt = 0
@@ -149,7 +149,7 @@ async def image_connect(ws, port):
                 #Time set
                 res_start = time.time()
                 
-                item_path = os.path.join('./ep1',item) #previous: './Carla1'
+                item_path = os.path.join('./ep0',item) #previous: './Carla1'
                 with open(item_path, 'rb') as f:
                     encoded_string = base64.b64encode(f.read()).decode('utf-8')
                     image_json =dict()
